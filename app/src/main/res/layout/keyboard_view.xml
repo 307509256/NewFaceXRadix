@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/key1"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            android:text="q"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key2"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="w"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key3"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="e"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key4"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="r"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key5"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="t"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key6"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="y"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key7"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="u"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key8"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="i"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key9"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="o"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key10"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="p"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:src="@drawable/delete"
+            
+            android:layout_width="95dp"
+            android:layout_height="75dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <Button
+            android:id="@+id/key11"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:text="a"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key12"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="s"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key13"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="d"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key14"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="f"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key15"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="g"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key16"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="h"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key17"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="j"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key18"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="k"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key19"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="l"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/done"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="Done"
+            android:layout_width="120dp"
+            android:layout_height="75dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/sw1"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:src="@drawable/shift"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key20"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:text="z"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key21"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="x"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key22"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="c"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key23"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="v"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key24"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="b"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key25"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:text="n"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key26"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="m"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key27"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="!"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key28"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="\?"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <ImageButton
+            android:id="@+id/sw2"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:src="@drawable/shift"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/Punctuation"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            
+            android:text="\?123"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:id="@+id/key29"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="/"
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+        <Button
+            android:text=" "
+            android:id="@+id/key30"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_width="370dp"
+            android:layout_height="70dp" />
+
+
+        <Button
+            android:id="@+id/key31"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text=","
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+        <Button
+            android:id="@+id/key32"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            
+            android:text="."
+            android:layout_width="70dp"
+            android:layout_height="75dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

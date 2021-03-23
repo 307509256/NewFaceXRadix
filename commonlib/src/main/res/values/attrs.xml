@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="titleBar">
+        <!-- 标题栏标题-->
+        <attr name="titleBarText" format="string"/>
+        <!-- 标题栏标题字体颜色-->
+        <attr name="titleBarTextColor" format="color"/>
+        <!-- 标题栏标题字体大小-->
+        <attr name="titleBarTextSize" format="dimension"/>
+        <!-- 标题栏主背景-->
+        <attr name="titleBarBackground" format="color|reference"/>
+
+        <!-- 返回是否显示-->
+        <attr name="titleBarBackVisible" format="boolean"/>
+
+    </declare-styleable>
+
+
+</resources>

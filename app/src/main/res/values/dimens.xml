@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardPadding">1px</dimen>
+    <dimen name="cardRadius" >50dp</dimen>
+
+    <dimen name="text_title">35sp</dimen>
+    <dimen name="text">80sp</dimen>
+    <dimen name="text_smart">28sp</dimen>
+    <dimen name="text_smart_smart">18sp</dimen>
+
+    <!--shape button-->
+    <dimen name="shape_size_width">45pt</dimen>
+    <dimen name="shape_size_height">25pt</dimen>
+    <dimen name="shape_size_stroke">0.5dp</dimen>
+    <dimen name="shape_radius">30pt</dimen>
+    <dimen name="shape_radius_big">30pt</dimen>
+    <dimen name="shape_size_width_big">300pt</dimen>
+    <dimen name="shape_size_height_big">150pt</dimen>
+    <dimen name="shape_circle_size">60dp</dimen>
+
+    <dimen name="title_txt_size">25sp</dimen>
+    <dimen name="content_txt_size">23sp</dimen>
+    <dimen name="icon_size">70dp</dimen>
+    <dimen name="title_height_size">100dp</dimen>
+    <dimen name="xedittext_height_size">50pt</dimen>
+    <dimen name="footer_height_size">20dp</dimen>
+    <dimen name="footer_font_size">20sp</dimen>
+
+    <dimen name="btn_smart_size">30dp</dimen>
+    <dimen name="btn_middle_size">30pt</dimen>
+    <dimen name="btn_big_size">55dp</dimen>
+    <dimen name="text_smartest">12sp</dimen>
+    <dimen name="btn_key_size">55pt</dimen>
+    <dimen name="btn_key_margin">15dp</dimen>
+
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/review"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rtc.RtcActivity">
+
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/glview_call"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bg">
+
+        <TextView
+            android:id="@+id/connectType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="正在呼叫中...."
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/endlayout"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15pt"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:id="@+id/ivEnd"
+            android:background="@drawable/selector_btn_circle"
+            android:src="@drawable/ic_svg_handup"/>
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/volume_down"
+        android:layout_width="40pt"
+        android:layout_height="40pt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="47dp"
+        android:layout_toLeftOf="@+id/endlayout"
+        android:background="@drawable/selector_btn_circle"
+        android:src="@drawable/ic_volume_down_black_24dp"
+        android:tint="@color/white" />
+
+
+    <ImageButton
+        android:id="@+id/volume_up"
+        android:layout_width="40pt"
+        android:layout_height="40pt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="47dp"
+        android:layout_toRightOf="@+id/endlayout"
+        android:background="@drawable/selector_btn_circle"
+        android:src="@drawable/ic_volume_up_black_24dp"
+        android:tint="@color/white" />
+
+    <Chronometer
+        android:layout_marginLeft="10dp"
+        android:textColor="#999"
+        android:id="@+id/chronometer"
+        android:textSize="23pt"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+
+
+</RelativeLayout>

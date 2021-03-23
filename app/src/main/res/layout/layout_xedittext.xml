@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/shape_xedittext"
+    android:orientation="horizontal"
+
+    android:weightSum="4">
+
+    <EditText
+        android:maxLength="15"
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="3"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="@string/config_input_password"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_smart" />
+
+    <ImageButton
+        android:id="@+id/ibtnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/shape_xedittext"
+        android:src="@drawable/ic_svg_cancle_sel" />
+
+</LinearLayout>

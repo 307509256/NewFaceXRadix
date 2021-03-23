@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF43E1FD</color>
+    <color name="colorPrimaryDark">#43b0fd</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- 普通黑色字体 -->
+    <color name="txt_color_deep_black">#333333</color>
+    <!-- 普通字体 -->
+    <color name="txt_common_black">#666666</color>
+    <!-- 普通黑色字体 -->
+    <color name="txt_color_black">#606060</color>
+    <!-- 普通灰色字体 -->
+    <color name="txt_color_gray">#acacac</color>
+
+    <color name="gray">#ffcccccc</color>
+    <color name="gray_e">#e7e7e7</color>
+
+    <color name="bg">#88ffffff</color>
+    <color name="bg1">#55ffffff</color>
+
+    <color name="red">#ffDB3A3A</color>
+    <color name="green">#ff2BB219</color>
+    <color name="orange">#ffFF8B20</color>
+
+    <color name="red500">#db4437</color>
+
+
+    <!--shape color-->
+    <color name="transparent">#00ffffff</color>
+    <color name="shape_sel">#77ffffff</color>
+    <color name="shape_solid_select">#66ffffff</color>
+    <color name="shape_stroke">#ffffff</color>
+    <color name="system_title">#1480F4</color>
+
+
+</resources>

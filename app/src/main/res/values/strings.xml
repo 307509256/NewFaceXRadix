@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">人脸识别一体机</string>
+
+    <string name="right_icon">设置</string>
+
+    <string name="edition">1.0.0</string>
+    <string name="work_model">人脸识别</string>
+    <string name="local_ip">192.168.1.100</string>
+
+
+    <string name="out_authenticata">请输入密码</string>
+    <string name="out_password">密码</string>
+    <string name="sure">确 定</string>
+    <string name="message_sure">确定</string>
+    <string name="message_cancel">取消</string>
+
+        <string name="footer">Copyright@中山市宇信科技有限公司</string>
+<!--    <string name="footer">Copyright@博慧佳信科技（北京）有限公司</string>-->
+    <!--<string name="footer">Copyright@新疆康斯佳能源股份有限公司</string>-->
+    <string name="notic">公告</string>
+
+    <string name="host">192.168.1.5</string>
+    <string name="port">5000</string>
+
+    <string name="none_notic">暂无公告</string>
+    <string name="helper_title">帮助</string>
+    <string name="helper_content">欢迎使用人脸识别可视对讲一体机</string>
+        <string name="helper_contact">联系人:中山宇市信科技有限公司</string>
+<!--    <string name="helper_contact">联系人:博慧佳信科技（北京）有限公司</string>-->
+    <!--    <string name="helper_repeat_call">报修电话:0760-88872250</string>-->
+    <string name="helper_repeat_call">报修电话:010-84631194</string>
+    <string name="config_authenticate">管理员认证</string>
+    <string name="config_input_data">请输入</string>
+    <string name="config_input_password">请输入管理密码</string>
+    <string name="qr_tip">请出示二维码</string>
+    <string name="qr_content">请将二维码对准摄像头</string>
+    <string name="config_device_ip">终端ip</string>
+    <string name="config_server_ip">服务器ip</string>
+    <string name="config_device_voice">语音提示</string>
+    <string name="config_device_weigen">韦根</string>
+    <string name="config_device_operate_time_out">操作超时时间(s)</string>
+    <string name="config_device_relay">继电器关闭时间(s)</string>
+    <string name="config_face_identification_speed">人脸识别速度</string>
+    <string name="config_face_identification_speed_low">低</string>
+    <string name="config_face_identification_speed_middle">中</string>
+    <string name="config_face_identification_speed_fast">高</string>
+    <string name="config_face_identification_threshold">人脸识别等级</string>
+    <string name="config_face_identification_threshold_1">100%</string>
+    <string name="config_face_identification_threshold_2">10%</string>
+    <string name="config_face_identification_threshold_3">1%</string>
+    <string name="config_face_identification_threshold_4">0.1%</string>
+    <string name="config_face_identification_threshold_5">0.01%</string>
+    <string name="config_face_identification_threshold_6">0.001%</string>
+    <string name="config_face_identification_threshold_7">0.0001%</string>
+    <string name="config_face_identification_threshold_8">0.00001%</string>
+    <string name="config_face_identification_threshold_9">0.000001%</string>
+    <string name="config_face_identification_duplicate">人脸重复</string>
+    <string name="config_face_identification_duplicate_true">重复</string>
+    <string name="config_face_identification_duplicate_false">不重复</string>
+    <string name="config_user_count">用户数据</string>
+    <string name="config_users_count">用户总数:</string>
+    <string name="config_user_card_count">注册卡片数:</string>
+    <string name="config_user_face_count">注册人脸数:</string>
+    <string name="config_user_offline_record_count">离线开门记录</string>
+    <string name="config_device_sn">设备序列号</string>
+    <string name="card_tip">读取中(30s)</string>
+    <string name="card_content">请将卡片贴近屏幕下方识别</string>
+    <string name="tip_room_call">请输入房间号\n限定房间号为4位\n第一位是栋号，后三位是房间号</string>
+    <string name="face_runing">没有权限！</string>
+
+
+    <string name="face_setting">设置</string>
+    <string name="face_id">设备ID</string>
+    <string name="face_track">人脸检测</string>
+    <string name="face_recognize">识别</string>
+    <string name="face_livness">动作活体</string>
+    <string name="face_image">图片比对</string>
+    <string name="face_image_attrs">图片活体属性</string>
+    <string name="face_image_gaze">图片注意力</string>
+    <string name="face_image_emotion">图片情绪</string>
+    <string name="face_image_quality">图片质量</string>
+    <string name="face_head_pose">图片姿态角</string>
+    <string name="face_id_phone">证件照</string>
+    <string name="face_ir">红外比对</string>
+    <string name="face_ir_silent">红外活体</string>
+    <string name="face_process">图片处理</string>
+    <string name="face_depth">深度图</string>
+    <string name="face_test">多线程</string>
+    <string name="face_attrs">属性</string>
+    <string name="face_image_crop">图片裁剪</string>
+
+    <string name="min_face_size">最小检测人脸：%s px</string>
+    <string name="image_size"> 分辨率：%s p</string>
+    <string name="silent_live_type">活体模式：%s</string>
+    <string name="feature_threshold_value">识别阈值：%s 分</string>
+    <string name="rgb_live_threshold_value">RGB 活体阈值：%s</string>
+    <string name="nir_live_threshold_value">NIR 活体阈值：%s</string>
+    <string name="depth_live_threshold_value">Depth 活体阈值：%s</string>
+    <string name="detect_type">检测形式：%s</string>
+
+    <string name="import_tip">1.在SD卡根目录，创建一个文件夹，命名为Face-Import。
+    \n\n2.将需要导入的每个图片，文件名示例为username-group.jpg，即用户名-用户组名的文件命名方式。
+    \n\n3.新建一个压缩文件，命名为Face.zip，将人脸图片全部放到该zip下，并将zip文件放置到Face-Import目录下。
+    \n\n4.点击下方按钮开始解压操作，批量注册时间较长，请耐心等待，不要关闭此窗口。</string>
+
+    <string name="search_text">通过视频流方式，完成实时的动态人脸识别,
+        \n并集合了动态的活体检测，确保识别过程的\n安全性</string>
+
+    <string name="reigster_text">基于指定质量检测要求，完成人脸图像的注册
+        \n注册的人脸数据存于本地，如实际商用过程中
+        \n请使用数据接口完成特征值或图片同步</string>
+
+    <string name="user_text">包含人脸注册、更新、删除等业务能力，此处
+        \n操作的人脸信息仅存于本地，实际商用过程中
+        \n请使用数据接口对设备终端进行更新。</string>
+
+    <string name="import_text">支持人脸库的批量导入，SDK会自动基于图片
+        \n信息进行用户组和用户的创建</string>
+
+    <string name="mirror_tips">根据镜头或者使用设备差异，可能存在检测框与实际人脸方向镜像的问题，
+        可通过以下设置进行调节。常见于镜头前置后置切换。</string>
+
+    <string name="register_text_explain1">本地人脸库以人脸组的形式进行管理，每个人脸\n组下，可以注册无限个用户。
+        每个用户下默认仅\n一张人脸。 </string>
+    <string name="register_text_explain2">用户名为必填项。请输入英文或者数字，不支持\n汉字或者特殊字符。</string>
+    <string name="register_text_explain3">用户组为非必填项，如不设置用户组名，则默认\n注册到default 组下。您可以在人脸库管理中，
+        进\n行具体人脸组、人脸用户、及详细用户信息的查\n看和编辑。</string>
+    <string name="register_text_explain4">用户信息为非必填项，用于标记用户的一些其他\n信息。</string>
+
+</resources>

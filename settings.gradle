@@ -1,0 +1,1 @@
+include ':app', ':commonlib', ':serialport', ':facelibrary', ':trtc', ':beauty'

@@ -5,44 +5,49 @@
     android:layout_margin="15dp"
     android:orientation="horizontal">
 
-
-    <LinearLayout
+    <ImageView
+        android:id="@+id/qr_code"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_gravity="center"
-            android:layout_margin="25dp"
-            android:src="@mipmap/qr_code_android" />
+        android:layout_height="wrap_content"/>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="安卓版"
-            android:textSize="20sp" />
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical">-->
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:orientation="vertical">
+<!--        <ImageView-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="25dp"-->
+<!--            android:src="@mipmap/qr_code_android" />-->
 
 
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="安卓版"-->
+<!--            android:textSize="20sp" />-->
+<!--    </LinearLayout>-->
 
-        <TextView
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical">-->
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="IOS版 请在app store 搜索 FaceTalk"
-            android:textSize="20sp" />
-    </LinearLayout>
+
+
+<!--        <TextView-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="IOS版 请在app store 搜索 FaceTalk"-->
+<!--            android:textSize="20sp" />-->
+<!--    </LinearLayout>-->
 </LinearLayout>

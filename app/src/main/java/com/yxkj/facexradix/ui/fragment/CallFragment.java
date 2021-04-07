@@ -149,7 +149,7 @@ public class CallFragment extends BaseFragment implements View.OnClickListener {
         ClientUtil.isOnCall = true;
         type2_layout.setVisibility(View.GONE);
         type1_layout.setVisibility(View.GONE);
-        if (SPUtils.getInstance().getInt("CALL_MODE", 0) == 0) {
+        if (SPUtils.getInstance().getInt("CALL_MODE", 0) == 0 ||  SPUtils.getInstance().getInt("CALL_MODE", 0) == 2) {
             type1_layout.setVisibility(View.VISIBLE);
             xEditText.setClickable(false);
             xEditText.setFocusable(false);
@@ -212,7 +212,7 @@ public class CallFragment extends BaseFragment implements View.OnClickListener {
                 if (!NoDoubleClick.isFastDoubleClick(800)) {
                     room = xEditText.getData();
                     if (!TextUtils.isEmpty(room)) {
-                        if(SPUtils.getInstance().getInt("CALL_MODE", 0) != 3) {
+                        if(SPUtils.getInstance().getInt("CALL_MODE", 0) != 2) {
                             checkPermissions();
                         }else{
                             int roomNo = (int) ((Math.random() * 9 + 1) * 100000);

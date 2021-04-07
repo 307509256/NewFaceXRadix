@@ -20,6 +20,7 @@ import com.starrtc.starrtcsdk.core.im.message.XHIMMessage;
 import com.tencent.rtmp.ui.TXCloudVideoView;
 import com.tencent.trtc.TRTCCloud;
 import com.tencent.trtc.TRTCCloudDef;
+import com.yxdz.commonlib.util.SPUtils;
 import com.yxkj.facexradix.R;
 import com.yxkj.facexradix.netty.util.ClientUtil;
 import com.yxkj.facexradix.room.FacexDatabase;
@@ -81,12 +82,14 @@ public class TRTCActivity extends AppCompatActivity implements View.OnClickListe
         if(closeTRTCActivity != null){
             unregisterReceiver(closeTRTCActivity);
         }
+        SPUtils.getInstance().put("ISONCALL",0);
         super.onDestroy();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SPUtils.getInstance().put("ISONCALL",1);
         setContentView(R.layout.activity_trtc);
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         initView();
@@ -119,9 +122,11 @@ public class TRTCActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void closeSn(String type) {
-        for (String s : snList) {
-            MessageBean closeBean = new MessageBean("close", type);
-            SendUtils.sendMsg(closeBean, s);
+        if(snList != null) {
+            for (String s : snList) {
+                MessageBean closeBean = new MessageBean("close", type);
+                SendUtils.sendMsg(closeBean, s);
+            }
         }
     }
 
@@ -352,7 +357,9 @@ public class TRTCActivity extends AppCompatActivity implements View.OnClickListe
         if (!isArlreadyJoin) {
             isArlreadyJoin = true;
             ClientUtil.Receiver = sn;
-            snList.remove(sn);
+            if(snList != null) {
+                snList.remove(sn);
+            }
             closeSn("2");
         }
     }

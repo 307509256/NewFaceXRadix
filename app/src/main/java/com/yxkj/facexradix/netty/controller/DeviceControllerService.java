@@ -527,6 +527,7 @@ public class DeviceControllerService extends Service {
             sendSusses(dataIntent);
             com.alibaba.fastjson.JSONObject data = JSON.parseObject(dataIntent.getStringExtra("data"));
             String roomNo = data.getString("roomNo");
+            Log.d(TAG, "callroomNo: "+ roomNo);
             final Intent intent = new Intent(context, TRTCActivity.class);
             int sdkAppId = GenerateTestUserSig.SDKAPPID;
             String userSig = GenerateTestUserSig.genTestUserSig(ClientUtil.Sender);
@@ -546,7 +547,7 @@ public class DeviceControllerService extends Service {
             intent.putExtra(KEY_AUDIO_HANDFREEMODE, true);
             intent.putExtra(KEY_RECEIVED_VIDEO, mReceivedVideo);
             intent.putExtra(KEY_RECEIVED_AUDIO, mReceivedAudio);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
             context.startActivity(intent);
         }
     };

@@ -64,6 +64,7 @@ public class NavigateActivity extends BaseActivity {
             time.setTue1Fr("00:00"); time.setTue1To("23:59");
             time.setWed1Fr("00:00"); time.setWed1To("23:59");
             time.setThu1Fr("00:00"); time.setThu1To("23:59");
+            time.setFri1Fr("00:00"); time.setFri1To("23:59");
             time.setSat1Fr("00:00"); time.setSat1To("23:59");
             FacexDatabase.getInstance(this).getTimeDao().insert(time);
         }

@@ -98,12 +98,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import static com.tencent.liteav.demo.trtc.TRTCVideoRoomActivity.KEY_AUDIO_HANDFREEMODE;
-import static com.tencent.liteav.demo.trtc.TRTCVideoRoomActivity.KEY_AUDIO_VOLUMETYOE;
-import static com.tencent.liteav.demo.trtc.TRTCVideoRoomActivity.KEY_RECEIVED_AUDIO;
-import static com.tencent.liteav.demo.trtc.TRTCVideoRoomActivity.KEY_RECEIVED_VIDEO;
-import static com.yxdz.commonlib.util.SPUtils.getInstance;
-
 
 /**
  * @PackageName: com.yxdz.fadox.ui.activity
@@ -132,6 +126,9 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        if (SPUtils.getInstance().getInt("ISONCALL", 0) == 1) {
+                            return;
+                        }
                         List<Fragment> fragments = FragmentUtil.getFragments(getSupportFragmentManager());
                         LogUtils.d(TAG, "fragments:" + fragments.size());
                         int size = fragments.size();
@@ -227,7 +224,7 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
     BroadcastReceiver openDoor_VIA_TRTC = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (getInstance().getInt(Constants.DEVICE_CTRL_MODE, 0) == 1) {
+            if (SPUtils.getInstance().getInt(Constants.DEVICE_CTRL_MODE, 0) == 1) {
                 outputCardNo("75BCD15");
                 ToastUtils.showShortToast("正在开门中");
             } else {
@@ -279,7 +276,7 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
     private Intent deviceServiceIntent;
     private Intent userServiceIntent;
     private Timer reconnect;
-    private ServiceConnection connection = new ServiceConnection() {
+    private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             serialPortBinder = (SerialPortService.SerialPortBinder) service;
@@ -307,7 +304,7 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
         public void onReceive(Context context, Intent intent) {
             int type = intent.getIntExtra("type", 0);
             if (type == 1) {
-                String mode = getInstance().getString(Constants.DEVICE_OPEATOR_MODE, "1");
+                String mode = SPUtils.getInstance().getString(Constants.DEVICE_OPEATOR_MODE, "1");
                 switch (mode) {
                     case "11":
                     case "12":
@@ -502,7 +499,7 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
 
         //初始化 唤醒模式
         Intent intent = new Intent("WAKE_UP_MODE");
-        intent.putExtra("type", getInstance().getInt("DEVICE_WAKE_MODE", 1));
+        intent.putExtra("type", SPUtils.getInstance().getInt("DEVICE_WAKE_MODE", 1));
         sendBroadcast(intent);
 
         //自动重连
@@ -527,8 +524,8 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
 
     //主动检测更新
     private void checkUpgrade() {
-        String serverIp = getInstance().getString(Constants.SERVER_ADDRESS);
-        String serverPort = getInstance().getString(Constants.SERVER_ADDRESS_IMAGE_PORT);
+        String serverIp = SPUtils.getInstance().getString(Constants.SERVER_ADDRESS);
+        String serverPort = SPUtils.getInstance().getString(Constants.SERVER_ADDRESS_IMAGE_PORT);
         if (!serverIp.isEmpty() && !serverPort.isEmpty()) {
             XUpdate.newBuild(this)
                     .isWifiOnly(false)
@@ -612,7 +609,7 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
         reconnect.schedule(new TimerTask() {
             @Override
             public void run() {
-                if (getInstance().getBoolean("isReconnect", false)) {
+                if (SPUtils.getInstance().getBoolean("isReconnect", false)) {
                     if (ClientMain.getChannel() != null) {
                         ClientMain.getChannel().close();
                     }
@@ -854,7 +851,7 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
 
     //熄屏/唤醒控制服务
     public void initScreenControlService() {
-        int time = getInstance().getInt(Constants.SLEEP_TIME, 60);
+        int time = SPUtils.getInstance().getInt(Constants.SLEEP_TIME, 60);
         screenControlService = Executors.newScheduledThreadPool(1);
         screenControlService.scheduleWithFixedDelay(screenPowerTask, time, time, TimeUnit.SECONDS);
     }
@@ -1144,44 +1141,46 @@ public class MainActivity extends BaseActivity implements SerialPortListener, Ca
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            int type = intent.getIntExtra("type", 0);
-            int time = SPUtils.getInstance().getInt("Lock_time", 5000);
-            switch (type) {
-                case 0:
-                    if (!isCloseLong && !isOpenLong) {
-                        Gpio.RelayOnOff(1);
-                        if (timer != null) {
-                            timer.cancel();
-                            timer.purge();
-                            timer = null;
-                        }
-                        timer = new Timer();
-                        timer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                Gpio.RelayOnOff(0);
+            if (SPUtils.getInstance().getInt(Constants.DEVICE_CTRL_MODE, 0) == 1) {
+                outputCardNo(Constants.DEFAULT_CARD);
+            } else {
+                int type = intent.getIntExtra("type", 0);
+                int time = SPUtils.getInstance().getInt("Lock_time", 5000);
+                switch (type) {
+                    case 0:
+                        if (!isCloseLong && !isOpenLong) {
+                            Gpio.RelayOnOff(1);
+                            if (timer != null) {
+                                timer.cancel();
+                                timer.purge();
                                 timer = null;
                             }
-                        }, time);
-                    }
-                    break;
-                case 1:
-                    if (!isCloseLong) {
+                            timer = new Timer();
+                            timer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    Gpio.RelayOnOff(0);
+                                    timer = null;
+                                }
+                            }, time);
+                        }
+                        break;
+                    case 1:
+                        isCloseLong = false;
                         isOpenLong = true;
                         Gpio.RelayOnOff(1);
-                    }
-                    break;
-                case 2:
-                    if (!isOpenLong) {
+                        break;
+                    case 2:
+                        isOpenLong = false;
                         isCloseLong = true;
                         Gpio.RelayOnOff(0);
-                    }
-                    break;
-                case 3:
-                    isOpenLong = false;
-                    isCloseLong = false;
-                    Gpio.RelayOnOff(0);
-                    break;
+                        break;
+                    case 3:
+                        isOpenLong = false;
+                        isCloseLong = false;
+                        Gpio.RelayOnOff(0);
+                        break;
+                }
             }
         }
     }

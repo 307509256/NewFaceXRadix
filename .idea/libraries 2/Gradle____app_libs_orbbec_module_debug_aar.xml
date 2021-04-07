@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/orbbec_module-debug.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffd7743d8887b8cbbd735f808e0aede8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffd7743d8887b8cbbd735f808e0aede8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffd7743d8887b8cbbd735f808e0aede8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffd7743d8887b8cbbd735f808e0aede8/jars/libs/openni2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -546,6 +546,7 @@ public class DeviceControllerService extends Service {
             intent.putExtra(KEY_AUDIO_HANDFREEMODE, true);
             intent.putExtra(KEY_RECEIVED_VIDEO, mReceivedVideo);
             intent.putExtra(KEY_RECEIVED_AUDIO, mReceivedAudio);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         }
     };
